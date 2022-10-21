@@ -1,4 +1,4 @@
-#include "specific.h"
+#include "realloc/specific.h"
 #include "assoc.h"
 
 #define WORDS 370119
