@@ -5,7 +5,7 @@
    No copying of key/data is done.
 */
 
-#include "../../ADTs/General/general.h"
+#include "general/general.h"
 
 #include <stdio.h>
 #include <stdlib.h>
