@@ -40,8 +40,5 @@ unsigned int assoc_count(assoc* a);
 */
 void* assoc_lookup(assoc* a, void* key);
 
-/* No need to implement */
-void assoc_todot(assoc* a);
-
 /* Free up all allocated space from 'a' */
 void assoc_free(assoc* a);
