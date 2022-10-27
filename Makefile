@@ -7,14 +7,16 @@ PRODUCTION= $(COMMON) -O3
 LDLIBS = -lm
 
 testrealloc : assoc.h realloc/specific.h realloc/realloc.c testassoc.c general/general.h general/general.c
-	$(CC) testassoc.c realloc/realloc.c general/general.c -o testrealloc -I./Realloc $(PRODUCTION) $(LDLIBS)
+	$(CC) testassoc.c realloc/realloc.c general/general.c -o testrealloc -I./realloc $(PRODUCTION) $(LDLIBS)
+
+testcuckoo : assoc.h cuckoo/specific.h cuckoo/cuckoo.c testassoc.c general/general.h general/general.c
+	$(CC) testassoc.c cuckoo/cuckoo.c general/general.c -o testcuckoo -I./cuckoo $(PRODUCTION) $(LDLIBS)
 
 clean:
-	rm -f testrealloc_s testrealloc_v testrealloc testcuckoo_s testcuckoo_v testcuckoo
+	rm -f testrealloc testcuckoo
 
 basic: testrealloc
 	./testrealloc
 
-cuckoo: testcuckoo_s testcuckoo_v
-	./testcuckoo_s
-	valgrind ./testcuckoo_v
+cuckoo: testcuckoo
+	./testcuckoo
