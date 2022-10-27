@@ -8,6 +8,7 @@
 #define HT2 2
 #define TIMES_HUNDRED *100
 #define THRESHOLD 30
+#define MAX_LOOP 1000
 
 typedef enum bool {false, true} bool;
 
