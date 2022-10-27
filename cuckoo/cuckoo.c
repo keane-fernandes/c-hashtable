@@ -1,11 +1,6 @@
 /*
-   Hi Neill, I was having trouble rehashing during the resize and
-   hence I've implemented this using a fixed size. The cuckoo logic
-   is there during insertion (i.e. the key/value pairs keep cuckooing each other out
-   until a NULL key field is found in either of the hash tables). 
-   
-   I have left the resizing functions in there even though I have not used them,
-   I would really appreciate your feedback on how to go about implementing this :)
+   A cuckoo hashing implementation of the 
+   polymorphic hashtable ADT.
 */
 
 #include "specific.h"
